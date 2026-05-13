@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>swiper연습2-여러개의슬라이드 보여주기</title>
+  <link rel="stylesheet" href="../reset.css">
+  <!-- swiperjs css -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+/>
+<!-- swiperjs 스크립설치 -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+<style>
+.swiper {
+  width: 80%;
+  height: 50vh;
+}
+
+</style>
+</head>
+<body>
+  <!-- Slider main container -->
+<div class="swiper swiper1">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    <div class="swiper-slide">
+      <a href="">
+        <img src="https://picsum.photos/400/500?random=1">
+      </a>
+    </div>
+    <div class="swiper-slide">
+      <a href="">
+        <img src="https://picsum.photos/400/500?random=2">
+      </a>
+    </div>
+    <div class="swiper-slide">
+       <a href="">
+        <img src="https://picsum.photos/400/500?random=3">
+      </a>
+    </div>
+      <div class="swiper-slide">
+      <a href="">
+        <img src="https://picsum.photos/400/500?random=4">
+      </a>
+    </div>
+    <div class="swiper-slide">
+      <a href="">
+        <img src="https://picsum.photos/400/500?random=5">
+      </a>
+    </div>
+    <div class="swiper-slide">
+       <a href="">
+        <img src="https://picsum.photos/400/500?random=6">
+      </a>
+    </div>
+  
+  </div>
+  <!-- If we need pagination -->
+  <div class="swiper-pagination"></div>
+
+  <!-- If we need navigation buttons -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+
+  <!-- If we need scrollbar -->
+  <div class="swiper-scrollbar"></div>
+</div>
+<!-- swiper 실행 -->
+<script>
+  const swiper1 = new Swiper('.swiper1', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+    clickable :true,
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
+</script>
+</body>
+</html>
