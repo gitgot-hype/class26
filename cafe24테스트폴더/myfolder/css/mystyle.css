@@ -328,8 +328,55 @@ product_listmain xans-product-listmain
   display: none;
 }
 
+/******
+override 
+기존 css를 무시하고 커스텀하는 방식
+********/
+/* .ec-base-product .prdList .thumbnail .likeButton::before {
+    content: none;
+}
+.ec-base-product .prdList .thumbnail .likeButton img {
+    display: block;
+} */
+.ec-base-tab.typeMenu li a.button {
+  border:0 none;
+  background-color: transparent;
+}
+.ec-base-tab.typeMenu li a.button::before {
+  content:"#";
+  padding-right:0px;
+  color:currentColor;
 
+}
 
+.ec-base-product .prdList .icon__box {
+  display:none;
+}
+
+/* 칼라칩 이동 */
+/* 상품카드 위로 */
+/* .ec-base-product .prdList .prdList__item {
+  position: relative;
+} */
+/* .ec-base-product .spec .color {
+    position: absolute;
+    top: -20px;
+    right: 0px;
+} */
+.ec-base-product .spec .chips {
+  width:20px; height: 10px;
+  border-radius: 999px;
+}
+.ec-base-product .spec .color {
+    position: absolute;
+    top: -20px;
+    right: 0px;
+}
+
+/* 상품설명 위로 */
+.ec-base-product .prdList .description {
+  position:relative;
+}
 /* 미디어쿼리 */
 
 @media (max-width:1024px){
